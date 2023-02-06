@@ -103,3 +103,4 @@ print("prijs zonder BTW",prijs,sum(prijs))
 print("BTW =21%")
 print(sum(prijs)*BTW)
 
+

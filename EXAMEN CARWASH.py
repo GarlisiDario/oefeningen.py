@@ -15,7 +15,7 @@ print('Categorie B: Ford Focus(3), Audi A3(4), Mercedes A klasse(5)')
 print('Categorie C: Audi A4(6), Bmw 3(7), Mercedes C klasse 95(8)')
 AUTO = input("-")
 
-if AUTO == 1 or 2:
+if AUTO == "1" or "2":
     print("categorie A kost 45 euro per dag ex btw")
     prijs.append(45)
     wagen.append(45)
@@ -33,7 +33,7 @@ else:
 
 print("voor hoeveel dagen wilt u de auto huren?")
 dagen = int(input())
-dagen1.append(dagen)
+sum(prijs)
 
 print("uit welke verzekering wilt u kiezen?"
       "A = standaard of B = full omnium?")
