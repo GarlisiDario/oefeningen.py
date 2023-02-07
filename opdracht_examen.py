@@ -121,10 +121,11 @@ def toon_menu():
     print(table)
 def verhoog_alle_loon():
     extra_loon = int(input("geef aan hoeveel u extra wilt geven per maand"))
+    P_table = PrettyTable(["Naam", "geslacht", "afdeling", "jaar_indienst", "maandloon"])
     for id,persoon in personeel.items():
-        if persoon["maandloon"]+ int(extra_loon):
-            print(persoon)
-
+         persoon["maandloon"] += extra_loon
+         P_table.add_row([persoon["naam"], persoon["geslacht"], persoon["afdeling"], persoon["jaar_indienst"],persoon["maandloon"]])
+    print(P_table)
 #hoofdprogama#
 def log_in():
     id = input("geef aan welke admin id")
@@ -137,8 +138,7 @@ def log_in():
             keuze = input("geef aan wat u wilt doen met (kies uit lijst Nummer)")
             while not (keuze == "stop"):
                 if keuze == "1":
-                    for k,id in admin.items():
-                        print(k,id)
+                    toon_admin()
                 elif keuze == "2":
                     voeg_personeelslid_toe()
                 elif keuze == "3":
